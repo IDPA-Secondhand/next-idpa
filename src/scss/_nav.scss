@@ -1,0 +1,34 @@
+.header {
+  background-color: $colour-brand-primary;
+  box-shadow: $shadow;
+
+  &__title {
+    color: $colour-foreground;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 56px;
+  }
+
+  &__container {
+    margin: 0 20px;
+  }
+}
+
+.nav {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    display: inline-block;
+    font-family: $fontstack-body;
+
+    & > a {
+      color: $colour-foreground;
+      display: block;
+      line-height: 56px;
+      padding: 0 10px;
+    }
+  }
+}

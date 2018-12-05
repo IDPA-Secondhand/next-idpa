@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+$colour-text-primary: rgba(0, 0, 0, 0.8);
+$colour-text-muted: rgba(0, 0, 0, 0.7);
+$colour-text-body: rgba(0, 0, 0, 0.5);
+$colour-text-secondary: rgba(0, 0, 0, 0.4);
+
+$colour-brand-primary: #ECB957;
+$colour-brand-muted: #B99144;
+$colour-brand-shaded:#6C6049;
+
+$colour-foreground: #FFFFFF;
+$colour-background: #FAFAFA;
+
+/*
+
+Bulma Variables
+
+*/
+
+// Colours
+
+$primary: $colour-brand-primary;
+
+
+// Sizes
+
+$size-1: (36 / 16) * 1em;
+$size-2: (30 / 16) * 1em;
+$size-3: (24 / 16) * 1em;;
+$size-4: (20 / 16) * 1em;;
+$size-5: 1em;
+
+// Font Families
+
+$family-primary: "IBM Plex Sans";
+$family-secondary: "Poppins";
+
+@import "../../node_modules/bulma/bulma.sass";

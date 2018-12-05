@@ -1,0 +1,39 @@
+%shared-heading {
+  font-family: $fontstack-heading;
+  margin: 0;
+}
+
+.h1 {
+  @extend %shared-heading;
+  color: $colour-text-primary;
+  font-size: (36 / 16) * 1em;
+  font-weight: 700;
+}
+
+.h2 {
+  @extend %shared-heading;
+  font-size: (30 / 16) * 1em;
+  font-weight: 700;
+}
+
+.h3 {
+  @extend %shared-heading;
+  font-size: (24 / 16) * 1em;
+  font-weight: 600;
+}
+
+.h4 {
+  @extend %shared-heading;
+  font-size: (20 / 16) * 1em;
+  font-weight: 500;
+}
+
+.h5 {
+  @extend %shared-heading;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.anchor {
+  text-decoration: none;
+}
