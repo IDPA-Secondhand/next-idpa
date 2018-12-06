@@ -1,37 +1,36 @@
-%shared-heading {
-  font-family: $fontstack-heading;
-  margin: 0;
-}
-
 .h1 {
-  @extend %shared-heading;
-  color: $colour-text-primary;
-  font-size: (36 / 16) * 1em;
-  font-weight: 700;
+  color: $black-ter;
+  font-family: $family-secondary;
+  font-size: $size-1;
+  font-weight: $weight-bold;
 }
 
 .h2 {
-  @extend %shared-heading;
-  font-size: (30 / 16) * 1em;
-  font-weight: 700;
+  color: $grey-darker;
+  font-family: $family-secondary;
+  font-size: $size-2;
+  font-weight: $weight-bold;
 }
 
 .h3 {
-  @extend %shared-heading;
-  font-size: (24 / 16) * 1em;
-  font-weight: 600;
+  color: $grey-dark;
+  font-family: $family-secondary;
+  font-size: $size-3;
+  font-weight: $weight-semibold;
 }
 
 .h4 {
-  @extend %shared-heading;
-  font-size: (20 / 16) * 1em;
-  font-weight: 500;
+  color: $grey;
+  font-family: $family-secondary;
+  font-size: $size-4;
+  font-weight: $weight-medium;
 }
 
 .h5 {
-  @extend %shared-heading;
-  font-size: 1em;
-  font-weight: 500;
+  color: $grey-light;
+  font-family: $family-secondary;
+  font-size: $size-5;
+  font-weight: $weight-medium;
 }
 
 .anchor {
