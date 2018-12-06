@@ -3,36 +3,39 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
-// const IndexPage = ({ data }) => (
-//   <Layout>
-//     <h1>Hi people</h1>
-//   </Layout>
-// )
+import Card from '../components/card'
 
 class IndexPage extends React.Component {
   render () {
-    let { shopsQuery } = this.props.data
+    let {
+      shopsQuery
+    } = this.props.data
     
     const shops = shopsQuery.edges.map(e => e.node)
 
     return (
       <Layout>
         <>        
-        {shops.map((shop) => {
-          let shopBody = shop.data
-          const categories = shopBody.productRange.map(e => e.data)
 
-          return(
-            <div key={shopBody.slug}>
-              <h1>{shopBody.name}</h1>
-              <p>{shopBody.slug}</p>
-              {categories.map((category) => {
-                return <span key={category.uid}>{category.title}</span>
-              })}
+        <div className="columns" style={{marginTop: '3em'}}>
+          <div className="column is-half">
 
-            </div>
-          )
-        })}
+            {shops.map((shop) => {
+              let shopBody = shop.data
+              const categories = shopBody.productRange.map(e => e.data)
+              const imageUrl = shopBody.fileNode[0].thumbnails.large.url
+              // console.log(imageUrl)
+              return(
+                <Card
+                  key={shopBody.slug}
+                  title={shopBody.name}
+                  imageUrl={imageUrl}
+                  categories={categories} />
+              )
+            })}
+          </div>
+        </div>
+
         </>
       </Layout>
     )
@@ -48,11 +51,19 @@ query {
           slug
           name
           owner
+          fileNode {
+            thumbnails {
+              large {
+                url
+              }
+            }
+          }
           productRange {
             id
             data {
               title
               uid
+              slug
             }
           }
         }
