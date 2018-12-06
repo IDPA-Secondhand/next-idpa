@@ -30,15 +30,12 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
+        <div className="sh-container">
+          <div className="columns is-mobile">
+            <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop is-6-fullhd is-offset-3-fullhd">
+              {children}
+            </div>          
+          </div>
         </div>
       </>
     )}
