@@ -5,6 +5,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: `keyTiycvkXZLfi2WO`, // may instead specify via env, see below
@@ -40,7 +48,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Poppins:500,600,700', 'IBM Plex Sans']
+          families: ['Poppins:500,600,700', 'IBM Plex Sans:400,500']
         },
       },
     },
