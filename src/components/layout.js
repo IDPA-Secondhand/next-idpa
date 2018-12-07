@@ -32,9 +32,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="sh-container">
           <div className="columns is-mobile">
-            <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop is-6-fullhd is-offset-3-fullhd">
-              {children}
-            </div>          
+            {children}  
           </div>
         </div>
       </>
