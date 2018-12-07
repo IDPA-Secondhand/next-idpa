@@ -40,3 +40,13 @@ body {
   font-weight: 500;
   text-transform: uppercase;
 }
+
+.card-spacing {
+  &.is-regular {
+    margin-bottom: 7px;
+  }
+
+  &.is-extended {
+    margin-bottom: 20px;
+  }
+}
