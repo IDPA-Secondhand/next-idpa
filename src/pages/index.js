@@ -15,28 +15,29 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <>        
+        <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop is-6-fullhd is-offset-3-fullhd">
 
         <div className="columns" style={{marginTop: '3em'}}>
-          <div className="column is-half">
-
-            {shops.map((shop) => {
-              let shopBody = shop.data
-              const categories = shopBody.productRange.map(e => e.data)
-              const imageUrl = shopBody.fileNode[0].thumbnails.large.url
-              // console.log(imageUrl)
-              return(
+          {shops.map((shop) => {
+            let shopBody = shop.data
+            const categories = shopBody.productRange.map(e => e.data)
+            const imageUrl = shopBody.fileNode[0].thumbnails.large.url
+            // console.log(imageUrl)
+            return(
+              <div className="column is-half">
                 <Card
                   key={shopBody.slug}
                   title={shopBody.name}
                   imageUrl={imageUrl}
+                  to={shopBody.slug}
+                  priceRange={Number(shopBody.priceRange[0].data.value)}
                   categories={categories} />
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
         </div>
 
-        </>
+        </div>
       </Layout>
     )
   }
@@ -51,6 +52,11 @@ query {
           slug
           name
           owner
+          priceRange {
+            data {
+              value
+            }
+          }
           fileNode {
             thumbnails {
               large {
