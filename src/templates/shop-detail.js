@@ -58,7 +58,7 @@ export default ({ data }) => {
             <div className="column is-6">
               <div className="has-bottom-margin">
                 <h2 className="h2 has-margin">Lage</h2>
-                <img src="http://source.unsplash.com/l68Z6eF2peA/600x400" />
+                <img src="https://source.unsplash.com/l68Z6eF2peA/600x400" />
               </div>
 
               <div className="has-bottom-margin">
