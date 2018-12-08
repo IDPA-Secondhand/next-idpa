@@ -7,8 +7,17 @@ body {
 }
 
 @include mobile {
+  main.no-overflow {
+    overflow: hidden;
+  }
+
+  .sheet {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
   .sh-container {
-    padding: 0 16px;
+    padding: 0 20px;
     position: relative;
   }
 }
@@ -49,4 +58,82 @@ body {
   &.is-extended {
     margin-bottom: 20px;
   }
+}
+
+.hero.has-bg-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero.is-large {
+  width: 100%;
+  height: 80vh;
+}
+
+.sheet {
+  margin-top: -15vh;
+}
+
+.icon-list {
+  & > li {
+    margin-bottom: 10px;
+
+    & > a {
+      margin-left: 30px;
+    }
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      position: absolute;
+    }
+  }
+}
+
+.icon-check::before {
+  background-image: url('../icons//check.svg');
+}
+
+.icon-phone::before {
+  background-image: url('../icons/phone.svg');
+}
+
+.icon-mail::before {
+  background-image: url('../icons/mail.svg');
+}
+
+p,
+a.body-colour {
+  color: $colour-text-body;
+}
+
+p.extended {
+  line-height: 1.618em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  hyphens: auto;
+}
+
+h1.has-margin,
+h2.has-margin,
+h3.has-margin,
+h4.has-margin,
+h5.has-margin,
+p.has-margin {
+  margin-bottom: 0.5em;
+}
+
+div.has-bottom-margin {
+  margin-bottom: 3em;
+}
+
+.nomargin-last > *:last-child {
+  margin-bottom: 0;
 }

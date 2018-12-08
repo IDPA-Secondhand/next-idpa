@@ -12,6 +12,10 @@ $colour-brand-shaded:#6C6049;
 $colour-foreground: #FFFFFF;
 $colour-background: #FAFAFA;
 
+$shadow: 0 8px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+
+$rounded-corner: 3px;
+
 /*
   Bulma Variables
 */
@@ -19,6 +23,8 @@ $colour-background: #FAFAFA;
 // Colours
 $primary: $colour-brand-primary;
 $light: $colour-background;
+
+$body-color: $colour-text-body;
 
 // Sizes
 $size-1: (36 / 16) * 1em;
@@ -32,8 +38,12 @@ $family-primary: "IBM Plex Sans";
 $family-secondary: "Poppins";
 
 // Customise Card
-$card-shadow: 0 8px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
-$box-radius: 3px;
+$card-shadow: $shadow;
+$box-radius: $rounded-corner;
+
+// Customise Box
+$box-shadow: $shadow;
+$box-padding: 60px;
 
 // Customise Tag
 $tag-radius: 999px;
