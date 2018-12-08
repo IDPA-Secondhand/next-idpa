@@ -5,3 +5,35 @@
  */
 
 // You can delete this file if you're not using it
+
+const path = require('path')
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return new Promise((resolve, reject) => {
+    graphql(`
+    {
+      allAirtable(filter: {table: {eq: "shopsFinal"}}) {
+        edges {
+          node {
+            data {
+              slug
+            }
+          }
+        }
+      }
+    }
+    `).then(result => {
+      result.data.allAirtable.edges.forEach(({ node }) => {
+        createPage({
+          path: `/${node.data.slug}/`,
+          component: path.resolve('./src/templates/shop-detail.js'),
+          context: {
+            slug: node.data.slug
+          }
+        })
+      })
+      resolve()
+    })
+  })
+}
