@@ -6,6 +6,10 @@ body {
   background-color: $light;
 }
 
+.sh-container {
+  width: 100%;
+}
+
 @include mobile {
   main.no-overflow {
     overflow: hidden;
