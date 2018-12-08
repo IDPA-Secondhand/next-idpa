@@ -13,21 +13,20 @@ export default ({ data }) => {
       <div className="column is-12">
         <section
           className="hero is-large has-bg-image"
-          style={{ backgroundImage: `url('${shop.fileNode[0].thumbnails.large.url}')` }} >
+          style={{ backgroundImage: `url('${shop.fileNode[0].thumbnails.full.url}')` }} >
         </section>
       </div>
       <div className="column is-12-mobile is-10-tablet is-offset-1-tablet">
         <div className="box sheet">
           <div className="columns is-multiline">
-          <div className="has-bottom-margin">
             <div className="column is-12">
               <h1 className="h1">{shop.name}</h1>
             </div>
 
-            <div className="column is-12">
+            <div className="column is-12 has-bottom-margin">
               <p className="extended">{shop.description}</p>
             </div>
-          </div>
+
 
             <div className="column is-6 nomargin-last">
 
@@ -117,7 +116,7 @@ export const query = graphql`
         specialities
         fileNode {
           thumbnails {
-            large {
+            full {
               url
             }
           }
