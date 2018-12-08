@@ -34,7 +34,7 @@ export default ({ data }) => {
                 <h2 className="h2 has-margin">Sortiment</h2>
                 <ul className="icon-list">
                   {shop.productRange.map((category) => {
-                    return <li className="icon-check"><Link to={`/overview?${category.data.slug}`} className="body-colour">{category.data.title}</Link></li>
+                    return <li className="icon-check"><Link to={`/overview?category=${category.data.slug}`} className="body-colour">{category.data.title}</Link></li>
                   })}
                 </ul>
               </div>
@@ -48,10 +48,15 @@ export default ({ data }) => {
                 null
               }
 
-              <div className="has-bottom-margin">
-                <h2 className="h2 has-margin">Annahmebedingungen</h2>
-                <p className="extended">{shop.conditionsAccept}</p>
-              </div>
+              { shop.conditionsAccept != null ?
+                <div className="has-bottom-margin">
+                  <h2 className="h2 has-margin">Annahmebedingungen</h2>
+                  <p className="extended">{shop.conditionsAccept}</p>
+                </div>
+                :
+                null
+               }
+
             </div>
 
             <div className="column is-6">
@@ -67,7 +72,7 @@ export default ({ data }) => {
 
               <div className="has-bottom-margin">
                 <h2 className="h2 has-margin">Kontakt</h2>
-                <p className="has-margin">Inhaber: <span className="is-uppercase">{shop.owner}</span></p>
+                { shop.owner != null ? <p className="has-margin">Inhaber: <span className="is-uppercase">{shop.owner}</span></p> : null }
                 <p>{shop.street}</p>
                 <p className="has-margin">{shop.cities[0].data.zip} {shop.cities[0].data.name}</p>
 
