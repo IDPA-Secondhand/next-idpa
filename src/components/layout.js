@@ -30,11 +30,11 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="sh-container">
-          <div className="columns is-mobile">
-            {children}  
+        <main className="no-overflow">
+          <div className="columns is-mobile is-multiline">
+            {children}
           </div>
-        </div>
+        </main>
       </>
     )}
   />
