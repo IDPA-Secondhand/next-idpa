@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
         <div className="sh-container">
           <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop is-6-fullhd is-offset-3-fullhd">
 
-            <div className="columns" style={{marginTop: '3em'}}>
+            <div className="columns is-multiline" style={{marginTop: '3em'}}>
               {shops.map((shop) => {
                 let shopBody = shop.data
                 const categories = shopBody.productRange.map(e => e.data)
