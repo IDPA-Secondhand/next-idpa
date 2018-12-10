@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <>
-        <section className="hero is-large is-primary">
+        <section className="hero is-large unset-height-mobile is-primary">
           <div className="sh-container hero-text column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop is-6-fullhd is-offset-3-fullhd">
             <h1 className="h1">Mach den<br/>Unterschied.</h1>
             <hr className="seperator" />
@@ -46,7 +46,6 @@ class IndexPage extends React.Component {
                   let shopBody = shop.data
                   const categories = shopBody.productRange.map(e => e.data)
                   const imageUrl = shopBody.fileNode[0].thumbnails.large.url
-                  // console.log(imageUrl)
                   return(
                     <div className="column is-half" key={shopBody.slug}>
                       <Card
@@ -73,7 +72,7 @@ class IndexPage extends React.Component {
 
 export const query = graphql`
 query {  
-  shopsQuery: allAirtable(filter: {table: {eq: "shopsFinal"}}) {
+  shopsQuery: allAirtable(limit: 2, filter: {table: {eq: "shopsFinal"}, data: {cities: {elemMatch: {data: {zip: {eq: 5000}}}}}}) {
     edges {
       node {
         data {
