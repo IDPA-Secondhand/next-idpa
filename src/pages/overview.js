@@ -8,8 +8,9 @@ class Overview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // category: null,
-      city: null
+      category: null,
+      city: null,
+      allShops: null
     };
   }
 
@@ -30,16 +31,60 @@ class Overview extends React.Component {
   }
 
   render () {
+
+    let {
+      overview
+    } = this.props.data
+
+    const shops = overview.edges.map(e => e.node)
+
+    // 
+    // LOOK INTO
+    // https://github.com/JedWatson/react-select
+    //
+    // filter component
+    //
+
     return (
       <Layout>
         <div className="column sh-container is-10 is-offset-1">
           <h1 className="h1" style={{marginTop: '2em'}}>Übersicht</h1>
           {this.state.category}<br/>
           {this.state.city}
+
+          {shops.map((shop, i) => {
+            const body = shop.data
+            return (
+              <div className="card" style={{margin: '2em 0', padding: '3em'}}>
+                <h2 key={body.slug} className="h2">{body.name}</h2>
+                {body.productRange.map((category) => (<p style={{paddingLeft: '1em'}}>{category.data.slug}</p>))}
+              </div>
+            )
+          })}
         </div>
       </Layout>
     )
   }
 }
+
+export const overviewQuery = graphql`
+query {  
+  overview: allAirtable(filter: {table: {eq: "shopsFinal"}}) {
+    edges {
+      node {
+        data {
+          slug
+          name
+          productRange {
+            data {
+              slug
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
 
 export default Overview
