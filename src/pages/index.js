@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 import Card from '../components/card'
+import Button from '../components/button'
 import { ReactComponent as OnlineShopping } from '../images/online-shopping.svg'
 
 class IndexPage extends React.Component {
@@ -57,6 +58,9 @@ class IndexPage extends React.Component {
                     </div>
                   )
                 })}
+              </div>
+              <div className="buttons has-addons is-right">
+                <Button to="/overview?city=aarau">Shops nach Ort filtern.</Button>
               </div>
             </section>
           </div>
