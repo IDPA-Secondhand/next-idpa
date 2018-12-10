@@ -181,22 +181,28 @@ hr.seperator {
     position: relative;
   }
 
+  .hero.is-large.unset-height-mobile {
+    height: unset;
+  }
+
   .hero-icon {
-    bottom: -20vh;
-    // left: 0;
+    bottom: 0;
+    display: block;
+    margin-bottom: -50px;
+    max-width: 400px;
     padding: 0 20px;
+    position: relative;
     right: 0;
     width: 100%;
-    max-width: 400px;
   }
 
   .hero-text {
-    top: 10vh;
+    margin-top: 35px;
   }
 
   .section.has-margin-large,
   div.has-margin-large {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   div.has-margin {
