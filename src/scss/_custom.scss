@@ -8,7 +8,8 @@ body {
 
 main {
   position: relative;
-  top: 52px;
+  margin-top: 52px;
+  padding-bottom: 20px;
 }
 
 .section.has-margin-large,
@@ -161,6 +162,10 @@ hr.seperator {
   width: 100px;
 }
 
+.button.is-custom {
+  color: $colour-text-primary;
+}
+
 @include mobile {
   main.no-overflow {
     overflow: hidden;
@@ -177,11 +182,12 @@ hr.seperator {
   }
 
   .hero-icon {
-    bottom: -17vh;
-    left: 0;
+    bottom: -20vh;
+    // left: 0;
     padding: 0 20px;
     right: 0;
     width: 100%;
+    max-width: 400px;
   }
 
   .hero-text {
