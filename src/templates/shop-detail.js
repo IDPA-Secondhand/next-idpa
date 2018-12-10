@@ -34,7 +34,7 @@ export default ({ data }) => {
                 <h2 className="h2 has-margin">Sortiment</h2>
                 <ul className="icon-list">
                   {shop.productRange.map((category) => {
-                    return <li className="icon-check"><Link to={`/overview?category=${category.data.slug}`} className="body-colour">{category.data.title}</Link></li>
+                    return <li key={category.data.slug} className="icon-check"><Link to={`/overview?category=${category.data.slug}`} className="body-colour">{category.data.title}</Link></li>
                   })}
                 </ul>
               </div>
