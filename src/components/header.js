@@ -21,7 +21,7 @@ class Header extends React.Component {
     } = this.props
 
     return (
-      <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-primary is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/"><h1 className="is-size-4 is-family-primary has-text-weight-bold" style={{fontFamily: 'Poppins'}}>{siteTitle}</h1></Link>
           <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded={this.state.showMenu ? 'true' : 'false'} onClick={this.toggleMenu} >
@@ -33,9 +33,10 @@ class Header extends React.Component {
 
         <div className={`navbar-menu${this.state.showMenu ? ' is-active' : '' }`}>
           <div className="navbar-end">
-            <Link className="navbar-item" to="/there/">Shops</Link>
-            <Link className="navbar-item" to="/there/">Kategorien</Link>
-            <Link className="navbar-item" to="/there/">Über Uns</Link>
+            <Link className="navbar-item" to="/">Home</Link>
+            <Link className="navbar-item" to="/overview/">Übersicht</Link>
+            <Link className="navbar-item" to="/categories/">Kategorien</Link>
+            <Link className="navbar-item" to="/about/">Über Uns</Link>
           </div>
         </div>
       </nav>
