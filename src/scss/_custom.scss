@@ -6,24 +6,26 @@ body {
   background-color: $light;
 }
 
-.sh-container {
-  width: 100%;
+main {
+  position: relative;
+  top: 52px;
 }
 
-@include mobile {
-  main.no-overflow {
-    overflow: hidden;
-  }
+.section.has-margin-large,
+div.has-margin-large {
+  margin-top: 150px;
+}
 
-  .sheet {
-    padding: 40px 20px;
-    border-radius: 0;
-  }
+div.has-margin {
+  margin-top: 3em;
+}
 
-  .sh-container {
-    padding: 0 20px;
-    position: relative;
-  }
+.navbar {
+  box-shadow: $shadow;
+}
+
+.sh-container {
+  width: 100%;
 }
 
 .pill-wrapper {
@@ -70,12 +72,15 @@ body {
 }
 
 .hero.is-large {
-  width: 100%;
   height: 80vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .sheet {
   margin-top: -15vh;
+  position: relative;
 }
 
 .icon-list {
@@ -140,4 +145,55 @@ div.has-bottom-margin {
 
 .nomargin-last > *:last-child {
   margin-bottom: 0;
+}
+
+.hero-icon {
+  bottom: -25vh;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  width: 50%;
+}
+
+hr.seperator {
+  background-color: $colour-text-primary;
+  height: 6px;
+  width: 100px;
+}
+
+@include mobile {
+  main.no-overflow {
+    overflow: hidden;
+  }
+
+  .sheet {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
+  .sh-container {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .hero-icon {
+    bottom: -17vh;
+    left: 0;
+    padding: 0 20px;
+    right: 0;
+    width: 100%;
+  }
+
+  .hero-text {
+    top: 10vh;
+  }
+
+  .section.has-margin-large,
+  div.has-margin-large {
+    margin-top: 100px;
+  }
+
+  div.has-margin {
+    margin-top: 1em;
+  }
 }
