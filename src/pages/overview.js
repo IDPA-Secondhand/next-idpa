@@ -2,6 +2,7 @@ import React from 'react'
 import queryString from 'querystring'
 
 import Layout from '../components/layout'
+import { Link } from 'gatsby'
 
 class Overview extends React.Component {
   
@@ -55,8 +56,8 @@ class Overview extends React.Component {
           {shops.map((shop, i) => {
             const body = shop.data
             return (
-              <div className="card" style={{margin: '2em 0', padding: '3em'}}>
-                <h2 key={body.slug} className="h2">{body.name}</h2>
+              <div key={body.slug} className="card" style={{margin: '2em 0', padding: '3em'}}>
+                <Link to={body.slug}><h2 className="h2">{body.name}</h2></Link>
                 {body.productRange.map((category) => (<p style={{paddingLeft: '1em'}}>{category.data.slug}</p>))}
               </div>
             )
