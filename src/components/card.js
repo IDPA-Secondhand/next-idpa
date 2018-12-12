@@ -10,7 +10,7 @@ import Rating from 'react-star-ratings'
 class Card extends React.Component {
   render () {
     let {
-      large,
+      // large,
       title,
       imageUrl,
       className,

@@ -191,12 +191,19 @@ query {
       }
     }
   }
-  filterCities: allAirtable(filter: {table: {eq: "cities"}}) {
+  filterCities: allAirtable(
+    filter: {
+      table: {eq: "cities"},
+      data: {
+        shopsFinal: {ne: null}
+      }}
+  ) {
     edges {
       node {
         data {
           label: name,
           value: zip
+          shopsFinal
         }
       }
     }

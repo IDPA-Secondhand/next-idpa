@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 
 import { Link } from 'gatsby'
 
-import { ReactComponent as CheckIcon } from '../icons/check.svg'
+// import { ReactComponent as CheckIcon } from '../icons/check.svg'
 
 export default ({ data }) => {
   const shop = data.airtable.data
@@ -62,7 +62,7 @@ export default ({ data }) => {
             <div className="column is-6">
               <div className="has-bottom-margin">
                 <h2 className="h2 has-margin">Lage</h2>
-                <img src="https://source.unsplash.com/l68Z6eF2peA/600x400" />
+                <img src="https://source.unsplash.com/l68Z6eF2peA/600x400" alt="a placeholder"/>
               </div>
 
               <div className="has-bottom-margin">
