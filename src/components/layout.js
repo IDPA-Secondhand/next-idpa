@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main className="no-overflow">
-          <div className="columns is-mobile is-multiline">
+          <div className="columns is-multiline">
             {children}
           </div>
         </main>
