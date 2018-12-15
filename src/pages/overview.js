@@ -120,16 +120,6 @@ class Overview extends React.Component {
               </div>
             </div>
           </div>
-            {/* {this.state.filteredShops.map((shop) => {
-              return (
-                <div key={shop.slug} className="card has-margin">
-                  <div className="card-content">
-                    {shop.cities[0].data.zip}
-                    <p>{shop.productRange.map((category, i) => <span key={i}>{category.data.slug}<br/></span>)}</p>
-                  </div>
-                </div>
-              )
-            })} */}
             <div className="column is-5">
               <div className="sh-container">
                 {this.state.filteredShops.map((shop) => {
