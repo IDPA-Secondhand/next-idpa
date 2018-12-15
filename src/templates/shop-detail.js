@@ -16,7 +16,7 @@ export default ({ data }) => {
           style={{ backgroundImage: `url('${shop.fileNode[0].thumbnails.full.url}')` }} >
         </section>
       </div>
-      <div className="column is-12-mobile is-10-tablet is-offset-1-tablet">
+      <div className="column is-12-mobile is-10-tablet is-offset-1-tablet is-8-widescreen is-offset-2-widescreen is-6-fullhd is-offset-3-fullhd">
         <div className="box sheet">
           <div className="columns is-multiline">
             <div className="column is-12">
@@ -50,7 +50,7 @@ export default ({ data }) => {
 
               { shop.conditionsAccept != null ?
                 <div className="has-bottom-margin">
-                  <h2 className="h2 has-margin">Annahmebedingungen</h2>
+                  <h2 className="h2 has-margin">Entgegennahme</h2>
                   <p className="extended">{shop.conditionsAccept}</p>
                 </div>
                 :
@@ -67,7 +67,53 @@ export default ({ data }) => {
 
               <div className="has-bottom-margin">
                 <h2 className="h2 has-margin">Öffnungszeiten</h2>
-                <i>dummy text</i>
+
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Montag:</td><td>{ shop.mondayMorning != null ? shop.mondayMorning : 'Geschlossen' },&nbsp;
+                        { shop.mondayAfternoon != null ? shop.mondayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Dienstag:</td><td>{ shop.tuesdayMorning != null ? shop.tuesdayMorning : 'Geschlossen' },&nbsp;
+                        { shop.tuesdayAfternoon != null ? shop.tuesdayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Mittwoch:</td><td>{ shop.wednesdayMorning != null ? shop.wednesdayMorning : 'Geschlossen' },&nbsp;
+                        { shop.wednesdayAfternoon != null ? shop.wednesdayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Donnerstag:</td><td>{ shop.thursdayMorning != null ? shop.thursdayMorning : 'Geschlossen' },&nbsp;
+                        { shop.thursdayAfternoon != null ? shop.thursdayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Freitag:</td><td>{ shop.fridayMorning != null ? shop.fridayMorning : 'Geschlossen' },&nbsp;
+                        { shop.fridayAfternoon != null ? shop.fridayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Samstag:</td><td>{ shop.saturdayMorning != null ? shop.saturdayMorning : 'Geschlossen' },&nbsp;
+                        { shop.saturdayAfternoon != null ? shop.saturdayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Sonntag:</td><td>{ shop.sondayMorning != null ? shop.sondayMorning : 'Geschlossen' },&nbsp;
+                        { shop.sondayAfternoon != null ? shop.sondayAfternoon : 'Geschlossen' }
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
               <div className="has-bottom-margin">
@@ -77,7 +123,7 @@ export default ({ data }) => {
                 <p className="has-margin">{shop.cities[0].data.zip} {shop.cities[0].data.name}</p>
 
                 <ul className="icon-list">
-                  <li className="icon-phone"><a href={`tel:${shop.phone}`}>{shop.phone}</a></li>
+                  { shop.phone != null ? <li className="icon-phone"><a href={`tel:${shop.phone}`}>{shop.phone}</a></li> : null }
                   <li className="icon-mail"><a href={`mailto:${shop.email}`}>{shop.email}</a></li>
                 </ul>
               </div>
@@ -95,6 +141,20 @@ export const query = graphql`
       data {
         name
         description
+        mondayMorning
+        mondayAfternoon
+        tuesdayMorning
+        tuesdayAfternoon
+        wednesdayMorning
+        wednesdayAfternoon
+        thursdayMorning
+        thursdayAfternoon
+        fridayMorning
+        fridayAfternoon
+        saturdayMorning
+        saturdayAfternoon
+        sundayMorning
+        sundayAfternoon
         productRange {
           data {
             title
