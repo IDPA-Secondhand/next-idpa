@@ -1,10 +1,11 @@
 import React from 'react'
-// import queryString from 'querystring'
+import queryString from 'querystring'
 import Select from 'react-select'
 
 import Layout from '../components/layout'
 import Card from '../components/card'
 // import { Link } from 'gatsby'
+
 
 class Overview extends React.Component {
 
@@ -56,14 +57,9 @@ class Overview extends React.Component {
         return fCategory.value
       })
 
-      console.log('cat', fCategories, 'city', selectedCityOption)
-
       const fShops = allShops.filter(shop => {
         return (fCategories.length === 0 ? true : shop.productRange.find(category => fCategories.includes(category.data.slug))) && (selectedCityOption === null ? true : selectedCityOption.value === shop.cities[0].data.zip)
-        // return shop.cities.data.zip === selectedCityOption.value
       })
-
-      console.log(this.state)
 
       this.setState({
         filteredShops: fShops
@@ -72,6 +68,20 @@ class Overview extends React.Component {
   }
 
   componentDidMount () {
+    let search = queryString.parse(this.props.location.search.substr(1))
+    if(search.city) {
+      const resultCity = this.state.citiesOptions.find( city => city.value === Number(search.city) )
+      this.handleCityChange(resultCity)
+    }
+
+    if(search.category) {
+      let arr = []
+      const resultCategory = this.state.categoriesOptions.find( category => category.value === search.category)
+      arr.push(resultCategory)
+      console.log(arr)
+      this.handleCategoriesChange(arr)
+    }
+    
     this.setState({
       filteredShops: this.state.allShops
     })
