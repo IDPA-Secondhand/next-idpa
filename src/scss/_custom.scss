@@ -172,6 +172,11 @@ hr.seperator {
 }
 
 @include mobile {
+  table td {
+    font-size: 0.9em;
+    padding: 0 10px 0 0;
+  }
+
   main.no-overflow {
     overflow: hidden;
   }
