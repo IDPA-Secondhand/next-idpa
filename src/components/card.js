@@ -84,8 +84,8 @@ Card.propTypes = {
   priceRange: PropTypes.number,
 }
 
-Card.defaultProps = {
-  large: true
-}
+// Card.defaultProps = {
+//   large: true
+// }
 
 export default Card
