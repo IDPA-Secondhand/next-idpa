@@ -171,6 +171,11 @@ hr.seperator {
   color: $colour-text-primary;
 }
 
+.footer {
+  box-shadow: $shadow;
+  margin-top: 4em;
+}
+
 @include mobile {
   table td {
     font-size: 0.9em;

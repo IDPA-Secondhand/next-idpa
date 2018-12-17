@@ -26,6 +26,8 @@ $light: $colour-background;
 
 $body-color: $colour-text-body;
 
+$link: $colour-brand-muted;
+
 // Sizes
 $size-1: (36 / 16) * 1em;
 $size-2: (30 / 16) * 1em;
@@ -47,6 +49,9 @@ $box-padding: 60px;
 
 // Customise Tag
 $tag-radius: 999px;
+
+// Customise Footer
+$footer-background-color: white;
 
 @import "../../node_modules/bulma/bulma.sass";
 
