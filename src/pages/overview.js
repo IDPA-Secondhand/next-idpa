@@ -98,7 +98,7 @@ class Overview extends React.Component {
 
     return (
       <Layout>
-          <div className="column is-3 is-offset-2">
+          <div className="column is-3 is-offset-2 is-2-fullhd is-offset-3-fullhd">
             <div className="sh-container">
             
               <div className="has-margin">
@@ -120,7 +120,7 @@ class Overview extends React.Component {
               </div>
             </div>
           </div>
-            <div className="column is-5">
+            <div className="column is-5 is-4-fullhd">
               <div className="sh-container">
                 {this.state.filteredShops.map((shop) => {
                   const categories = shop.productRange.map(e => e.data)
