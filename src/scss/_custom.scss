@@ -136,13 +136,18 @@ h5 {
   hyphens: auto;
 }
 
-h1.has-margin,
-h2.has-margin,
-h3.has-margin,
-h4.has-margin,
-h5.has-margin,
-p.has-margin {
-  margin-bottom: 0.5em;
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  &.has-margin {
+    margin-bottom: 0.5em;
+  }
+  &.has-margin-large {
+    margin-bottom: 1em;
+  }
 }
 
 div.has-bottom-margin {
