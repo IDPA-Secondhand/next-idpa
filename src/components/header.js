@@ -36,7 +36,7 @@ class Header extends React.Component {
             <Link className="navbar-item" to="/">Home</Link>
             <Link className="navbar-item" to="/overview/">Übersicht</Link>
             <Link className="navbar-item" to="/categories/">Kategorien</Link>
-            <Link className="navbar-item" to="/about/">Über Uns</Link>
+            <Link className="navbar-item" to="/about-us/">Über Uns</Link>
           </div>
         </div>
       </nav>
