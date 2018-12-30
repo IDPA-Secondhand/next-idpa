@@ -59,7 +59,7 @@ class IndexPage extends React.Component {
                 })}
               </div>
               <div className="buttons has-addons is-right">
-                <Button to="/overview?city=aarau">Shops nach Ort filtern.</Button>
+                <Button to="/overview/">alle Shops anzeigen</Button>
               </div>
             </section>
           </div>
