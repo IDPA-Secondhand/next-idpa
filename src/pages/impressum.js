@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 const Impressum = () => (
   <Layout>
     <div className="column is-12-mobile is-10-tablet is-offset-1-tablet is-8-widescreen is-offset-2-widescreen is-6-fullhd is-offset-3-fullhd">
-      <div className="box has-margin">
+      <div className="box sheet has-margin">
         <div class="impressum">
           <h1 className="h1 has-margin">Impressum</h1>
           <h2 className="h2 has-margin">Kontaktadresse</h2>
