@@ -98,11 +98,16 @@ class Overview extends React.Component {
 
     return (
       <Layout>
-          <div className="column is-3 is-offset-2 is-2-fullhd is-offset-3-fullhd">
+          <div className="column has-margin is-12-mobile is-10-tablet is-offset-1-tablet is-8-widescreen is-offset-2-widescreen is-6-fullhd is-offset-3-fullhd">
             <div className="sh-container">
-            
+              <h1 className="h1 has-margin">Übersicht aller Shops</h1>
+            </div>
+          </div>
+          <div className="column is-12-mobile is-4-tablet is-offset-1-tablet is-3-widescreen is-offset-2-widescreen is-2-fullhd is-offset-3-fullhd">
+            <div className="sh-container">
+
               <div className="has-margin">
-                <h2 className="h2 has-margin">Kategorien</h2>
+                <h2 className="h3 has-margin">Ich suche nach:</h2>
                 <Select
                   isMulti
                   isClearable
@@ -111,7 +116,7 @@ class Overview extends React.Component {
                   onChange={this.handleCategoriesChange} />
               </div>
               <div className="has-margin">
-                <h2 className="h2 has-margin">Ort</h2>
+                <h2 className="h3 has-margin">In der Ortschaft:</h2>
                 <Select
                   isClearable
                   options={citiesOptions}
@@ -120,7 +125,7 @@ class Overview extends React.Component {
               </div>
             </div>
           </div>
-            <div className="column is-5 is-4-fullhd">
+            <div className="column is-6-tablet is-5-widescreen is-4-fullhd">
               <div className="sh-container">
                 {this.state.filteredShops.map((shop) => {
                   const categories = shop.productRange.map(e => e.data)
@@ -136,6 +141,13 @@ class Overview extends React.Component {
                     </div>
                   )
                 })}
+                {this.state.filteredShops.length === 0 ? 
+                  <div className="has-margin">
+                    <p>Leider konnten anhand Ihrer Kriterien keine Shops gefunden werden </p>
+                  </div>
+                  :
+                  null
+                }
               </div>
             </div>
       </Layout>
