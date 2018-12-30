@@ -70,7 +70,7 @@ class Overview extends React.Component {
   componentDidMount () {
     let search = queryString.parse(this.props.location.search.substr(1))
     if(search.city) {
-      const resultCity = this.state.citiesOptions.find( city => city.value === Number(search.city) )
+      const resultCity = this.state.citiesOptions.find(city => city.value === Number(search.city))
       this.handleCityChange(resultCity)
     }
 
@@ -78,7 +78,6 @@ class Overview extends React.Component {
       let arr = []
       const resultCategory = this.state.categoriesOptions.find( category => category.value === search.category)
       arr.push(resultCategory)
-      console.log(arr)
       this.handleCategoriesChange(arr)
     }
     
