@@ -22,7 +22,7 @@ class Card extends React.Component {
     return (
       <div className={`box card is-paddingless is-clipped ${className}`}>
         <div className="card-image">
-          <figure className="image is-16by9">
+          <figure className="image">
             <img src={imageUrl} alt={title} />
           </figure>
           {/* <Img fluid={image.childImageSharp.fluid} /> */}
