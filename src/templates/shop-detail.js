@@ -62,13 +62,25 @@ export default ({ data }) => {
             <div className="column is-6">
               <div className="has-bottom-margin">
                 <h2 className="h2 has-margin">Lage</h2>
-<!--KOMMENTAR ANDI: UNTEN "BAHNHOFSTRASSE", "86", "5000" UND "AARAU" DYNAMISCH EINSTELLEN -->
-                <div style="width: 400px">
-                  <iframe width="100%" height="265" src="https://maps.google.com/maps?width=100%&amp;height=265&amp;hl=en&amp;q=Bahnhofstrasse%2086%2C%205000%20Aarau+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                
+                {/* 
+                  KOMMENTAR ANDI:
+                  UNTEN "BAHNHOFSTRASSE", "86", "5000" UND "AARAU" DYNAMISCH EINSTELLEN
+                */}
+
+                <div style={{width: '400px'}}>
+                  <iframe
+                    title="maps"
+                    width="100%"
+                    height="265"
+                    src={`https://maps.google.com/maps?width=100%&amp;height=265&amp;hl=en&amp;q=Schallengasse%206%204313%20Möhlin+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed`}
+                    frameBorder="0"
+                    scrolling="no"
+                    marginHeight="0"
+                    marginWidth="0">
                     <a href="https://www.maps.ie/map-my-route/">Karte</a>
                   </iframe>
-                </div
-                br />
+                </div>
               </div>
 
               <div className="has-bottom-margin">
@@ -176,6 +188,7 @@ export const query = graphql`
             name
           }
         }
+        mapsQuery
         phone
         email
         priceRange {
