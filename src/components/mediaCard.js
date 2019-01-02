@@ -2,7 +2,7 @@ import React from 'react'
 
 const MediaCard = ({ children }) => {
   return (
-    <div>
+    <div className="card">
       {children}
     </div>
   )
