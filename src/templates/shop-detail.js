@@ -68,12 +68,12 @@ export default ({ data }) => {
                   UNTEN "BAHNHOFSTRASSE", "86", "5000" UND "AARAU" DYNAMISCH EINSTELLEN
                 */}
 
-                <div style={{width: '400px'}}>
+                <div style={{width: '100%'}}>
                   <iframe
                     title="maps"
                     width="100%"
                     height="265"
-                    src={`https://maps.google.com/maps?width=100%&amp;height=265&amp;hl=en&amp;q=Schallengasse%206%204313%20Möhlin+()&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed`}
+                    src={`https://maps.google.com/maps?width=100%&height=265&hl=en&q=Schallengasse%206%204313%20Möhlin+()&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
                     frameBorder="0"
                     scrolling="no"
                     marginHeight="0"
