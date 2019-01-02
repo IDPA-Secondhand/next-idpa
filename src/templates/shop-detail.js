@@ -73,7 +73,7 @@ export default ({ data }) => {
                     title="maps"
                     width="100%"
                     height="265"
-                    src={`https://maps.google.com/maps?width=100%&height=265&hl=en&q=Schallengasse%206%204313%20Möhlin+()&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
+                    src={`https://maps.google.com/maps?width=100%&height=265&hl=en&q=${shop.mapsQuery}+()&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
                     frameBorder="0"
                     scrolling="no"
                     marginHeight="0"
