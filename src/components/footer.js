@@ -21,7 +21,7 @@ const header = () => {
                 <Link to="/impressum/">Impressum</Link><br />
               </div>
               <div className="column is-12">
-                <span>&copy; 2018 Andrea Huber, Simon Freiermuth, Tim König, Timon Forrer</span>
+                <span>&copy; 2019 Andrea Huber, Simon Freiermuth, Tim König, Timon Forrer</span>
               </div>
             </div>
           </div>
