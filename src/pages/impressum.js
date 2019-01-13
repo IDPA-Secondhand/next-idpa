@@ -11,7 +11,7 @@ const Impressum = () => (
         <p>Bahnhofstrasse 46</p>
         <p>5000 Aarau</p>
         <p>Schweiz</p>
-        <p>timon.forrer@gmail.com</p>
+        <a href="mailto:timon.forrer@gmail.com">timon.forrer@gmail.com</a>
         <p>&nbsp;</p>
         <h2 className="h3 has-margin">Vertretungsberechtigte Personen</h2>
         <p>
