@@ -35,11 +35,19 @@ div.has-margin {
 }
 
 .pill-wrapper {
+  // &::-webkit-scrollbar-button{ display: none; height: 5px; border-radius: 0px; background-color: #AAA; }
+  // &::-webkit-scrollbar-button:hover{ background-color: #AAA; }
+  // &::-webkit-scrollbar-thumb{ background-color: #CCC; }
+  // &::-webkit-scrollbar-thumb:hover{ background-color: #CCC; }
+  // &::-webkit-scrollbar-track{ background-color: #efefef; }
+  // &::-webkit-scrollbar-track:hover{ background-color: #CCC; }
+  &::-webkit-scrollbar{ display: none; }
+
   display: block;
   height: 26px;
   position: relative;
   overflow-y: visible;
-  overflow-x: auto;
+  overflow-x: scroll;
   width: calc(100% + 24px);
 }
 
