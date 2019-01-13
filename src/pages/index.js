@@ -72,7 +72,8 @@ class IndexPage extends React.Component {
 
 export const query = graphql`
 query {  
-  shopsQuery: allAirtable(limit: 2, filter: {table: {eq: "shopsFinal"}, data: {cities: {elemMatch: {data: {zip: {eq: 5000}}}}}}) {
+  shopsQuery: allAirtable(limit: 2, filter: {table: {eq: "shopsFinal"}}) {
+    #filter if there are enough shops in aarau... : data: {cities: {elemMatch: {data: {zip: {eq: 5000}}}}}
     edges {
       node {
         data {
