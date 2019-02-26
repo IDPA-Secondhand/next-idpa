@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
 
             <section className="section is-paddingless has-margin-large">
 
-              <h2 className="h2">Secondhand Läden in Aarau.</h2>
+              <h2 className="h2">Zwei ausgewählte Secondhandläden im Aargau.</h2>
               <div className="columns is-multiline has-margin">
                 {shops.map((shop) => {
                   let shopBody = shop.data
